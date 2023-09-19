@@ -63,12 +63,3 @@ function getScreen(size) {
   }
 }
 getScreen(16);
-
-function changeSize(input) {
-  if (input <= 64) {
-    getScreen(input);
-    document.getElementById("output").innerHTML = " ";
-  } else {
-    document.getElementById("output").innerHTML = "Too many squares";
-  }
-}
