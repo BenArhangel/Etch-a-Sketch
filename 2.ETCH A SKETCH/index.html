@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Etch-a-Sketch</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      href="https://img.icons8.com/dusk/64/paint-brush.png"
+      alt="paint-brush"
+    />
+  </head>
+  <body>
+    <main class="main">
+      <h1>Etch-a-Sketch</h1>
+      <div class="content">
+        <div class="screen"></div>
+        <div class="buttons">
+          <button class="black">Black</button>
+          <button class="random">Random color</button>
+          <button class="eraser">Eraser</button>
+          <button class="clear">Clear</button>
+        </div>
+        <div>
+          <div class="slider">
+            <output id="fontOutputId">16</output>
+            <input
+              id="fontInputId"
+              type="range"
+              placeholder="Size of Screen"
+              value="16 "
+              min="1"
+              max="64"
+              oninput="fontOutputId.value=fontInputId.value"
+              onchange="changeSize(this.value)"
+            />
+          </div>
+
+          <span id="output"></span>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script src="script.js"></script>
+</html>
